@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment</title>
+
+    <link rel="stylesheet" href="Index.css">
+    <script type="text/javascript" src="JQUERY/menu.js"></script>
+</head>
+<body>
+    <header> PHARMACY </header>
+    <section id="navigate">
+        
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Our Medicines</a>
+                       <ul>
+                            <li><a href="#">Fever</a> </li>
+                            <li><a href="#">Muscle Pains</a> </li>
+                            <li><a href="#">Cold & Cough</a> </li>
+                        </ul>
+                </li>
+        
+                <li>
+                    <a href="#">Health Care </a>
+                        <ul>
+                            <li><a href="#">Baby Care</a> </li>
+                            <li><a href="#">Skin Care</a> </li>
+                            <li><a href="#">Home Care</a> </li>
+                            <li><a href="#">Personal Care</a> </li>
+                            <li><a href="#">Pet Care</a> </li>
+                        </ul>
+                </li>
+                <li><a href="Forms.html">Lab Test</a></li>
+            </ul>
+    </section>
+
+    <section>
+        <div id="gallery">
+
+            <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            //Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html
+            //Reference http://www.jssor.com/development/tool-slideshow-transition-viewer.html
+
+            var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+        });
+    </script>
+
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; width: auto;
+        height: auto;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: auto;height:auto;">
+            </div>
+            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: auto;height:auto;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1400px; height: 410px;
+            overflow: hidden;">
+        <div>
+             <img u=image src="Images/Images/Animation/ani1.jpg"/>
+        </div>
+
+        <div>
+             <img class="top" src="Images/Images/Animation/ani2.png"/>
+        </div>
+        <div>
+             <img class="top" src="Images/Images/Animation/ani3.jpg"/>
+        </div>
+        <div>
+             <img class="top" src="Images/Images/Animation/ani4.jpg"/>
+        </div>
+        <div>
+             <img class="top" src="Images/Images/Animation/ani5.jpg"/>
+        </div>
+        </div>
+
+    </section>
+
+    <section>
+        <article id="covidcare">
+            <h2>Covid Care</h2>
+            <div class="covid">
+                <div class="name">Covid Test Kit</div>
+                <a href="#">
+                    <img src="images/images/Products/c1.jpg" alt="GL News">
+                </a>
+                <div class="desc">
+                    <ul>
+                        <li>MRP Rs 40/-</li>
+                        <li>Offer Price Rs 30/-</li>
+                    </ul>
+                </div>
+                <button class=" button button1 ">Add To Cart </button>
+            </div>
+    
+            <div class="covid">
+                <div class="name">Covid Essentials</div>
+                <a href="#">
+                    <img src="images/Images/Products/c2.jpg" alt="GL News">
+                </a>
+                <div class="desc">
+                    <ul>
+                        <li>MRP Rs 240/-</li>
+                        <li>Offer Price Rs 170/-</li>
+                    </ul>
+                </div>
+                <button class=" button button1 ">Add To Cart </button>
+            </div>
+    
+            <div class="covid">
+                <div class="name">Sanitizer Bottle</div>
+                <a href="#">
+                    <img src="images/Images/Products/c3.jpg" alt="GL News">
+                </a>
+                <div class="desc">
+                    <ul>
+                        <li>MRP Rs 99/-</li>
+                        <li>Offer Price Rs 87/-</li>
+                    </ul>
+                </div>
+                <button class=" button button1 ">Add To Cart </button>
+            </div>
+    
+            <div class="covid">
+                <div class="name">Mask</div>
+                <a href="#">
+                    <img src="images/Images/Products/c4.jpg" alt="GL News">
+                </a>
+                <div class="desc">
+                    <ul>
+                        <li>MRP Rs 45/-</li>
+                        <li>Offer Price Rs 30/-</li>
+                    </ul>
+                </div>
+                <button class=" button button1 ">Add To Cart </button>
+            </div>
+    
+        </article>
+
+        <article id="diabetescare">
+                <h2>Diabetes Care</h2>
+                <div class="covid">
+                    <div class="name">Tablets</div>
+                    <a href="#">
+                        <img src="images/images/Products/d1.jpg" alt="GL News">
+                    </a>
+                    <div class="desc">
+                        <ul>
+                            <li>MRP Rs 40/-</li>
+                            <li>Offer Price Rs 30/-</li>
+                        </ul>
+                    </div>
+                    <button class=" button button1 ">Add To Cart </button>
+                </div>
+        
+                <div class="covid">
+                    <div class="name">Chyawanprakash</div>
+                    <a href="#">
+                        <img src="images/Images/Products/d2.jpg" alt="GL News">
+                    </a>
+                    <div class="desc">
+                        <ul>
+                            <li>MRP Rs 40/-</li>
+                            <li>Offer Price Rs 30/-</li>
+                        </ul>
+                    </div>
+                    <button class=" button button1 ">Add To Cart </button>
+                </div>
+        
+                <div class="covid">
+                    <div class="name">Tooth Paste</div>
+                    <a href="#">
+                        <img src="images/Images/Products/d3.jpg" alt="GL News">
+                    </a>
+                    <div class="desc">
+                        <ul>
+                            <li>MRP Rs 40/-</li>
+                            <li>Offer Price Rs 30/-</li>
+                        </ul>
+                    </div>
+                    <button class=" button button1 ">Add To Cart </button>
+                </div>
+        
+                <div class="covid">
+                    <div class="name">Cookies</div>
+                    <a href="#">
+                        <img src="images/Images/Products/d4.png" alt="GL News">
+                    </a>
+                    <div class="desc">
+                        <ul>
+                            <li>MRP Rs 40/-</li>
+                            <li>Offer Price Rs 30/-</li>
+                        </ul>
+                    </div>
+                    <button class=" button button1 ">Add To Cart </button>
+                </div>
+        
+            </article>
+
+    <footer>@Copyright. Only for Demonstration Purpose.</footer>
+</body>

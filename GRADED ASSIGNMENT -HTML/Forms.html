@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Form</title>
+    <style>
+        /* simple selector */
+        body{
+            background-color: gainsboro;
+        }
+        header{
+            border-radius: 5px;
+            height: auto;
+            text-align: center;
+            border: 1px solid black;
+            background-color: whitesmoke;
+        }
+        footer{
+            margin-top: 70px;
+            margin-bottom: 70px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+        p, h1{
+            padding: 10px;
+            margin: 0%;
+        }
+        section{
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            width: 50%;
+        }
+        article{
+            min-width: 300px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: white;
+            /* background-color: tomato; */
+        }
+        input{
+            width: 300px;
+            border: none;
+            background-color: white;
+            border-bottom: 1px solid gray;
+            height: 30px;
+        }
+        input, label, p, #district{
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button{
+            display: block;
+            margin: 20px;
+            width: 80px;
+            border-radius: 4px;
+            height: 30px;
+            color: black;
+            font-size: 18px;
+            float: right;
+            border: none;
+            background-color: rgb(164, 167, 168);
+        }
+        #district{
+            height: 50px;
+        }
+        /* combinator selector */
+        header p{
+            text-align: left;
+        }
+        article p{
+            font-weight: bold;
+            font-family: Helvetica ;
+            letter-spacing: 2px;
+        }
+
+        /* pseudo class selector */
+        input:focus{
+            outline: none;
+            background-color: gainsboro;
+        }
+        
+        /* pseudo element selector */
+        header p::first-line{
+            font-weight: bold;
+            color: black;
+        }
+        article p::after{
+            content: "*";
+            color: red;
+        }
+        /* attribute selector */
+        input[name^="option"]{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Patient Details </h1>
+            <p>Read below instructions before proceeding:<br> Make sure you fill all the fileds where * is provided</p>
+        </header>
+        <form action="">
+            
+            <article>
+                <p> 1. Your Contact Details </p>
+                <p>Full Name:</p>
+                <input type="text" title="name" required>
+                <p>Patient Id if exists:-</p>
+                <input type="number" title="name" required>
+                <p>Contact No:</p>
+                <input type="number" title="name" required>
+                <p>Email id:</p>
+                <input type="email" >
+            </article>
+
+            <article>
+                <p>2. Address</p>
+                <p>H.No:</p>
+                <p>Street:</p>
+                <input type="text" >
+                <p>Area:</p>
+                <input type="text" >
+                <p>District:</p>
+                <input type="text" >
+            </article>
+
+            <article>
+                <p>Choose the Test Type</p>
+                <p>Check atleast one box without fail</p>
+                <input type="checkbox" id="c1" name="option1" value="CBC">
+                <label for="c1">CBC</label>
+                <br>
+                <input type="checkbox" id="c2" name="option2" value="Complete Urine">
+                <label for="c2">Complete Urine</label>
+                <br>
+                <input type="checkbox" id="c3" name="option3" value="Thyroid Stimulating Hormone(TSH)">
+                <label for="c3">Thyroid Stimulating Hormone(TSH)</label>
+                <br>
+                <input type="checkbox" id="c4" name="option4" value="Lipid Profile">
+                <label for="c3">Lipid Profile</label>
+                <br>
+                <input type="checkbox" id="c4" name="option4" value="Glucose Test">
+                <label for="c3">Glucose Test</label>
+            </article>
+
+            <article>
+                <p>Do you want a hard copy of the report also?</p>
+                <input type="radio" id="c5" name="option" value="True" required>
+                <label for="c5">Yes</label>
+                <br>
+                <input type="radio" id="c6" name="option" value="False">
+                <label for="c6">No</label>
+            </article>
+
+            <article>
+                <p>Select Your Comfortable Date and Time</p>
+                <input type="datetime-local" value="datetime-local" required>
+                <!-- <input type="time"> -->
+            </article>
+            <button>Reset</button>
+            <button>Submit</button>
+        </form>
+        <footer>
+            This form is developed for patients only. 
+        </footer>
+    </section>
+</body>
+</html>
